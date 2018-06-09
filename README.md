@@ -8,7 +8,7 @@ The program works by sending a signal to the keyboard, telling it to press the "
 
 ---
 
-![alt text](https://tvonarx.tumblr.com/post/174709090051/adafruit-feather-32u4-bluefruit-board-with-pulse)
+![alt text](https://www.tumblr.com/blog/tvonarx#)
 
 --- 
 
