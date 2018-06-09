@@ -8,7 +8,7 @@ The program works by sending a signal to the keyboard, telling it to press the "
 
 ---
 
-![alt text](https://www.tumblr.com/blog/tvonarx#)
+[Link to Picture](https://www.tumblr.com/blog/tvonarx#)
 
 --- 
 
