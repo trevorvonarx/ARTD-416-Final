@@ -6,7 +6,12 @@ I wrote an arduino sketch that which is to be implemented and used with pulse se
 
 The program works by sending a signal to the keyboard, telling it to press the "right" key, which is mapped to the respective direction in the video game emulator. I used two controllers, a playstation 4 dualshock, and the arduino. An arduino UNO does not hold enough processing power to allow for keyboard interation capabilities, so I went with the Bluefriut Feather 32u4 board can can handle the job. Below I have proveded the program and documentation of the Feather board and pulse sensor.
 
+---
+
+![alt text](https://tvonarx.tumblr.com/post/174709090051/adafruit-feather-32u4-bluefruit-board-with-pulse)
+
 --- 
+
 ### Arduino Sketch
 
 #include "Keyboard.h"
