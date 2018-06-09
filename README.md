@@ -14,32 +14,53 @@ The program works by sending a signal to the keyboard, telling it to press the "
 #define KEY_RIGHT_ARROW   0xD7
 
 int PulseSensorPurplePin = 0;                  // Pulse Sensor PURPLE WIRE connected to ANALOG PIN 0
+
 int LED13 = 13;                                // The on-board Arduino LED
+
 int Signal;                                    // holds the incoming raw data. Signal value can range from 0-1024
+
 int Threshold = 650;                           // Determine which Signal to "count as a beat", and which to ingore.
 
+
 void setup() {
+
   pinMode(LED13, OUTPUT);                      // Pin that will blink to as heartbeat
+  
   Serial.begin(9600);                          // Sets up Serial Communication at certain speed.
+  
   Keyboard.begin();                            // Sets up keyboard communication.
+  
 }
 
 void loop() {
 
   Signal = analogRead(PulseSensorPurplePin);   // Read the PulseSensor's value.
+  
                                                // Assign this value to the "Signal" variable.
+                                               
   Serial.println(Signal);                      // Send the Signal value to Serial Plotter.
+  
   if(Signal > Threshold) {
+  
                                                // If the signal is above "550", then "turn-on" Arduino's on-Board LED.
+                                               
     digitalWrite(LED13, HIGH);
+    
     Keyboard.press(KEY_RIGHT_ARROW);           // Presses right arrow on keyboard
+    
     delay(10);                                 // Hold the key for one second
+    
     Keyboard.releaseAll();                     // Release the key
     
+    
   } else {
+  
     digitalWrite(LED13, LOW);  
+    
      delay(10);
+     
                                                //  Else, the signal must be below "550", so "turn-off" this LED.
+                                               
   } 
 }
 
